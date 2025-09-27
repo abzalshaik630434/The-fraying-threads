@@ -1,0 +1,256 @@
+/* ========================
+   Body / Font
+   ======================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Garamond', 'Times New Roman', serif;
+  line-height: 1.8;
+  color: #4B5320;
+  font-size: 20px;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f4e3;
+}
+
+/* ========================
+   Hero Section / Title Page
+   ======================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;          /* full viewport height */
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fill screen without distortion */
+  object-position: top;    /* keep top of image visible */
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;                  /* text at the very top */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+  padding: 20px 10px 0 10px;
+  color: #4B5320;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.maintop {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.maintop1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* ========================
+   Title Page spacing
+   ======================== */
+.title-page {
+  margin-bottom: 60px;
+}
+
+/* ========================
+   Table of Contents
+   ======================== */
+.toc {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.toc ol {
+  list-style: decimal;
+  width: fit-content;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.toc ol li {
+  margin: 8px 0;
+}
+
+/* ========================
+   Profile / Dropdown
+   ======================== */
+.Ayesha {
+  background-image: url("ainu.png");
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  background-color: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #5E429C;
+  font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+  color: #f492f0;
+}
+
+/* ========================
+   Chapters
+   ======================== */
+.chapter {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  padding: 0 15px;
+}
+
+.chapter h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+/*highlight buttons*/
+.old, .now {
+  transition: background-color 0.3s ease;
+  padding: 10px;
+}
+
+.buttonid {
+  display: flex;
+  justify-content: flex-end; /* align buttons to the right */
+  gap: 10px;                 /* space between buttons */
+  position: fixed;
+  bottom: 10px;              /* distance from bottom */
+  right: 10px;               /* distance from right */
+  z-index: 1000;             /* ensure buttons appear above everything */
+}
+.nowbb{
+  background-color: #f0e68c; /* light yellow */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.oldbb{
+  background-color: #f0e68c; /* light yellow */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.testm{
+  background-color: #f0e68c; /* light yellow */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.oldbb:hover, .nowbb:hover, .testm:hover{
+  background-color: #e6e600;  /* brighter yellow on hover */
+  color: #000;                /* make text visible */
+  border: 2px solid black;    /* add solid border */
+  border-radius: 10px;        /* rounded corners */
+  transform: scale(1.05);     /* slight zoom effect */
+  transition: all 0s ease;  /* smooth hover animation */
+  cursor: pointer;            /* show pointer on hover */
+}
+
+
+/* Highlight styles */
+.highlight-old {
+  color: goldenrod; /* soft yellow */
+  box-shadow: black 0px 0px 5px 2px;
+}
+
+.highlight-now {
+  color: orange; /* soft pink */
+  box-shadow: black 0px 0px 5px 2px;
+}
+
+/* ========================
+   Media Queries
+   ======================== */
+@media (max-width: 1024px) {
+  html, body { font-size: 18px; padding: 20px; }
+  .hero-text h1 { font-size: 2.5rem; }
+  .hero-text h2 { font-size: 1.3rem; }
+  .Ayesha { height: 80px; width: 80px; }
+  .dropdown-menu { top: 100px; max-height: 350px; }
+}
+
+@media (max-width: 768px) {
+  html, body { font-size: 16px; padding: 15px; }
+  .hero-text { top: 10px; padding: 10px 5px 0 5px; }
+  .maintop { font-size: 2rem; }
+  .maintop1 { font-size: 1.2rem; }
+  .Ayesha { height: 70px; width: 70px; }
+  .dropdown-menu { top: 90px; max-height: 300px; }
+}
+
+@media (max-width: 480px) {
+  html, body { font-size: 14px; padding: 10px; }
+  .maintop { font-size: 1.6rem; }
+  .maintop1 { font-size: 1rem; }
+  .Ayesha { height: 60px; width: 60px; }
+  .dropdown-menu { top: 80px; max-height: 250px; }
+}
+/* Desktop Hero Image Adjustment */
+@media (min-width: 769px) {
+  .hero {
+    height: auto;           /* adjust height to image */
+    min-height: 80vh;       /* at least 80% of viewport */
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;           /* maintain aspect ratio */
+    object-fit: contain;    /* show full image without cropping */
+  }
+
+  .hero-text {
+    top: 0px;               /* move text near top */
+    transform: translateX(-50%); /* only horizontal centering */
+  }
+}
