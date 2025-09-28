@@ -86,16 +86,23 @@ html, body {
    Profile / Dropdown
    ======================== */
 .Ayesha {
-  background-image: url("ainu.png");
-  background-size: cover;
+  background-image: url("ainu.png");  /* your profile image */
+  background-size: cover;             /* fill the div */
+  background-position: center;        /* center the image */
   height: 100px;
   width: 100px;
-  border-radius: 50%;
+  border-radius: 50%;                 /* make it a circle */
   position: fixed;
   top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 1000;
+  transition: transform 0.3s ease;    /* smooth hover animation */
+}
+
+/* Hover Effect: slight scale and rotation */
+.Ayesha:hover {
+  transform: scale(1.1) rotate(180deg); 
 }
 
 .dropdown-menu {
