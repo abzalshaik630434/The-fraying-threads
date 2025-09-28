@@ -304,3 +304,17 @@ body.dark-mode .dark-mode-btn:hover {
     transform: translateX(-50%);
   }
 }
+@media (max-width: 768px) {
+  .Ayesha {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Ayesha {
+    height: 60px;
+    width: 60px;
+  }
+}
+
